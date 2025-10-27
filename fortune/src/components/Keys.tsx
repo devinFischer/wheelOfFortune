@@ -1,26 +1,13 @@
 import React, { useState, Component } from 'react';
 
 
-type KeyBoardProps = {
+type KeysProps = {
   Letter: string
   isClicked: boolean
   Price: number
 }
-type AccountProps = {
-  bankAccount: number
-}
 
-const PlayerAccount = (props: AccountProps) => {
-  const [bankAccount, setBankAccount] = useState(5000);
- 
-  return (
-    <div>Controller</div>
-  )
-}
-
-
-
-const Keyboard = (props: KeyBoardProps) => {
+const Keys = (props: KeysProps) => {
   const [isClicked, setIsClicked] = useState(false);
   const [price, setPrice] = useState(props.Price);
   const isVowel = 'aeiouAEIOU'.includes(props.Letter)
@@ -55,4 +42,4 @@ const Keyboard = (props: KeyBoardProps) => {
   )
 }
 
-export {Keyboard}
+export {Keys}
